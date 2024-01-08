@@ -41,10 +41,25 @@
             <h1>Your Homework:</h1>
             <table>
                 <thead>
-                    /*TODO*/
+                    <tr>
+                        <th>Homework</th>
+                        <th>Priority</th>
+                        <th>Subject</th>
+                        <th>Due Date</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
-                    /*TODO*/
+                    <tr>
+                        <td>Vehicle Lab</td>
+                        <td>2</td>
+                        <td>Comp Sci</td>
+                        <td>01/05/2024 (Friday)</td>
+                        <td>
+                            <a class="btn-small" href="detail.html"><i class="material-icons right">edit</i>Edit</a>
+                            <a class="btn-small red"><i class="material-icons right">delete</i>Delete</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -53,7 +68,35 @@
         <div class="section" id="add">
             <h2>Add an assignment:</h2>
             <form id="addForm">
-                
+                <div class="row">
+                    <div class="input-field col s8">
+                        <input type="text" id="titleInput" name="title" class="validate" data-length="45" required>
+                        <label for="titleInput">Assignment title:</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input type="number" id="priorityInput" name="priority" class="validate" min="1" max="10" value="5">
+                        <label for="priorityInput">Priority (1-10): </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select type="number" name="subject" id="subjectInput">
+                            <option value="1">Comp Sci</option>
+                            <option value="2">Math</option>
+                            <option value="3">Language</option>
+                            <option value="4">History</option>
+                        </select>
+                        <label for="subjectInput">Subject: </label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="date" id="dueDateInput" name="dueDate">
+                        <label for="dueDateInput">Due Date: </label>
+                    </div>
+                </div>
+                <button class="btn" type="submit">
+                    <i class="material-icons left">send</i>
+                    Submit
+                </button>
             </form>
         </div>
     </div>
